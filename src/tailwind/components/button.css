@@ -1,0 +1,236 @@
+.btn {
+  @apply no-underline inline-flex gap-2 h-12 px-7 border cursor-pointer select-none;
+  @apply items-center justify-center border-transparent transition duration-100 rounded-lg ease-in-out;
+
+  @apply border-base-200 bg-base-200 text-base-content outline-base-content;
+
+  /* brands color **************************************************************/
+
+  /* &-primary {
+    @apply bg-primary;
+  } */
+
+  &[class*="-primary"] {
+    @apply bg-primary border-primary text-primary-content outline-primary;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-red-900 bg-red-400;
+      }
+    }
+  }
+  &[class*="-secondary"] {
+    @apply bg-secondry border-secondry text-secondry-content outline-secondry;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-red-900 bg-red-400;
+      }
+    }
+  }
+
+  &[class*="-accent"] {
+    @apply bg-accent border-accent text-accent-content outline-accent;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-red-900 bg-red-400;
+      }
+    }
+  }
+
+  &[class*="-neutral"] {
+    @apply bg-neutral border-neutral text-red-500 outline-neutral;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-red-900 bg-red-400;
+      }
+    }
+  }
+
+  &[class*="-info"] {
+    @apply bg-info border-info text-red-500 outline-info;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-red-900 bg-red-400;
+      }
+    }
+  }
+  &[class*="-success"] {
+    @apply bg-success border-success text-red-500 outline-success;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-red-900 bg-red-400;
+      }
+    }
+  }
+  &[class*="-warning"] {
+    @apply bg-warning border-warning text-red-500 outline-warning;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-red-900 bg-red-400;
+      }
+    }
+  }
+  &[class*="-error"] {
+    @apply bg-error border-error text-red-500 outline-error;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-red-900 bg-red-400;
+      }
+    }
+  }
+
+  &[class*="-ghost"] {
+    @apply border border-transparent bg-transparent text-current;
+    @media (hover: hover) {
+      &:hover {
+        @apply dark:bg-base-content;
+        /* @apply border-opacity-0 dark:bg-base-content bg-opacity-20; */
+      }
+    }
+  }
+
+  &[class*="-link"] {
+    @apply border-transparent bg-transparent dark:text-primary  outline-none h-auto px-1;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-transparent bg-transparent underline;
+      }
+    }
+  }
+  /* outline *********************************************************************/
+  &[class*="-outline"] {
+    @apply border-current dark:bg-transparent dark:text-base-content;
+    @media (hover: hover) {
+      &:hover {
+        @apply dark:border-base-content dark:bg-base-content dark:text-base-100;
+      }
+    }
+    &.btn-primary {
+      @apply dark:text-primary;
+      @media (hover: hover) {
+        &:hover {
+          @apply dark:border-red-900 dark:bg-red-500 dark:text-primary-content;
+        }
+      }
+    }
+
+    &.btn-secondary {
+      @apply dark:text-secondry;
+      @media (hover: hover) {
+        &:hover {
+          @apply dark:border-red-900 dark:bg-red-500 dark:text-secondry-content;
+        }
+      }
+    }
+    &.btn-accent {
+      @apply dark:text-accent;
+      @media (hover: hover) {
+        &:hover {
+          @apply dark:border-red-900 dark:bg-red-500 dark:text-accent-content;
+        }
+      }
+    }
+    &.btn-success {
+      @apply dark:text-success;
+      @media (hover: hover) {
+        &:hover {
+          @apply dark:border-success dark:bg-success dark:text-base-100;
+        }
+      }
+    }
+    &.btn-info {
+      @apply dark:text-info;
+      @media (hover: hover) {
+        &:hover {
+          @apply dark:border-info dark:bg-info dark:text-base-100;
+        }
+      }
+    }
+    &.btn-warning {
+      @apply dark:text-warning;
+      @media (hover: hover) {
+        &:hover {
+          @apply dark:border-warning dark:bg-warning dark:text-base-100;
+        }
+      }
+    }
+    &.btn-error {
+      @apply dark:text-error;
+      @media (hover: hover) {
+        &:hover {
+          @apply dark:border-error dark:bg-error dark:text-base-100;
+        }
+      }
+    }
+  }
+  /* disabled ********************************************************************/
+  /* :disabled ===> just for whose that are form elements.like <input>, <button>, <select>, or <textarea>.not div 
+  or span */
+  &[disabled],
+  &:disabled {
+    @apply pointer-events-none  dark:bg-neutral  dark:text-base-content;
+  }
+  @media (hover: hover) {
+    &[disabled]:hover,
+    &:disabled:hover {
+      @apply dark:bg-neutral  dark:text-base-content;
+    }
+  }
+  /* size and shape ****************************************************************/
+  &[class*="-xs"] {
+    @apply h-6 px-2;
+    font-size: 0.75rem;
+  }
+
+  &[class*="-sm"] {
+    @apply h-8 px-3;
+    font-size: 0.875rem;
+  }
+  &[class*="-md"] {
+    @apply h-12 px-4;
+    font-size: 0.875rem;
+  }
+  &[class*="-lg"] {
+    @apply h-16 px-6;
+    font-size: 1.125rem;
+  }
+  &[class*="-wide"] {
+    @apply w-64 flex-nowrap;
+  }
+  &[class*="-block"] {
+    @apply w-full;
+  }
+
+  &[class*="-square"] {
+    &:where(.btn-xs) {
+      @apply h-6 w-6 p-0;
+    }
+    &:where(.btn-sm) {
+      @apply h-8 w-8 p-0;
+    }
+    &:where(.btn-md) {
+      @apply h-12 w-12 p-0;
+    }
+    &:where(.btn-lg) {
+      @apply h-16 w-16 p-0;
+    }
+  }
+
+  /* ******************************************************************************************* */
+
+  @media (hover: hover) {
+    &:hover {
+      @apply border-base-300 bg-base-300;
+    }
+  }
+  /*
+    مقدار  : ویژگی
+    کاربر چه تم رنگی را برای سیستم یا مرورگر انتخاب کرده
+  @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: white;
+  }
+}
+  
+  */
+}

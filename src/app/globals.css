@@ -1,26 +1,66 @@
 @import "tailwindcss";
+@import "../tailwind/components/components.css";
+@custom-variant dark (&:where(.dark, .dark *));
+html {
+  font-family: var(--font-vazir);
+}
+:lang(en) {
+  font-family: var(--font-figtree);
+}
+@utility container {
+  margin-left: auto;
+  margin-right: auto;
+}
+@theme {
+  --color-current: "currentColor";
+  --color-transparent: "transparent";
+  --color-white: "#F9F9F9";
+  --color-primary: oklch(59.09% 0.193 254.77);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondry: oklch(56.76% 0.202 283.08);
+  --color-secondry-content: oklch(100% 0 0);
+  --color-accent: oklch(68.94% 0.116 185.39);
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(31.38% 0.021 254.14);
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-base-25: oklch(35.67% 0.02 254.1);
+  --color-base-50: oklch(31.38% 0.021 254.14);
+  --color-base-75: oklch(26.89% 0.016 248.44);
+  --color-base-100: oklch(25.33% 0.016 252.42);
+  --color-base-200: oklch(23.26% 0.014 253.1);
+  --color-base-300: oklch(21.15% 0.012 254.09);
+  --color-base-content: oklch(74.65% 0.022 264.44);
+  --color-info: oklch(75.85% 0.137 231.62);
+  --color-success: oklch(77.33% 0.153 163.1);
+  --color-warning: oklch(83.3% 0.164 83.42);
+  --color-error: oklch(71.22% 0.165 22.15);
+  --color-gradient-first: oklch(83.22% 0.176 160.17);
+  --color-gradient-second: oklch(67.78% 0.15 238.98);
+  --color-info: oklch(75.85% 0.137 231.62);
+  --background-image-hero-pattern: url("/images/tile.svg");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.gradient {
+  @apply bg-gradient-to-r from-gradient-first to-gradient-second text-transparent bg-clip-text;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* --color-primary: oklch(59.09% 0.193 254.77);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondry: oklch(56.76% 0.202 283.08);
+  --color-secondry-content: oklch(100% 0 0);
+  --color-accent: oklch(68.94% 0.116 185.39);
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(31.38% 0.021 254.14);
+  --color-base-25: oklch(35.67% 0.02 254.1);
+  --color-base-50: oklch(31.38% 0.021 254.14);
+  --color-base-75: oklch(26.89% 0.016 248.44);
+  --color-base-100: oklch(25.33% 0.016 252.42);
+  --color-base-200: oklch(23.26% 0.014 253.1);
+  --color-base-300: oklch(21.15% 0.012 254.09);
+  --color-base-content: oklch(74.65% 0.022 264.44);
+  --color-info: oklch(75.85% 0.137 231.62);
+  --color-success: oklch(77.33% 0.153 163.1);
+  --color-warning: oklch(83.3% 0.164 83.42);
+  --color-error: oklch(71.22% 0.165 22.15);
+  --color-gradient-first": oklch(83.22% 0.176 160.17);
+  --color-gradient-second": oklch(67.78% 0.15 238.98); */
