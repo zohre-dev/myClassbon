@@ -11,69 +11,69 @@
   } */
 
   &[class*="-primary"] {
-    @apply bg-primary border-primary text-primary-content outline-primary;
+    @apply dark:bg-primary dark:border-primary dark:text-primary-content dark:outline-primary;
     @media (hover: hover) {
       &:hover {
-        @apply border-red-900 bg-red-400;
+        @apply dark:border-red-900 dark:bg-red-400;
       }
     }
   }
   &[class*="-secondary"] {
-    @apply bg-secondry border-secondry text-secondry-content outline-secondry;
+    @apply dark:bg-secondry dark:border-secondry dark:text-secondry-content dark:outline-secondry;
     @media (hover: hover) {
       &:hover {
-        @apply border-red-900 bg-red-400;
+        @apply dark:border-red-900 dark:bg-red-400;
       }
     }
   }
 
   &[class*="-accent"] {
-    @apply bg-accent border-accent text-accent-content outline-accent;
+    @apply dark:bg-accent dark:border-accent dark:text-accent-content dark:outline-accent;
     @media (hover: hover) {
       &:hover {
-        @apply border-red-900 bg-red-400;
+        @apply dark:border-red-900 dark:bg-red-400;
       }
     }
   }
 
   &[class*="-neutral"] {
-    @apply bg-neutral border-neutral text-red-500 outline-neutral;
+    @apply dark:bg-neutral dark:border-neutral dark:text-red-500 dark:outline-neutral;
     @media (hover: hover) {
       &:hover {
-        @apply border-red-900 bg-red-400;
+        @apply dark:border-red-900 dark:bg-red-400;
       }
     }
   }
 
   &[class*="-info"] {
-    @apply bg-info border-info text-red-500 outline-info;
+    @apply dark:bg-info dark:border-info dark:text-red-500 dark:outline-info;
     @media (hover: hover) {
       &:hover {
-        @apply border-red-900 bg-red-400;
+        @apply dark:border-red-900 dark:bg-red-400;
       }
     }
   }
   &[class*="-success"] {
-    @apply bg-success border-success text-red-500 outline-success;
+    @apply dark:bg-success dark:border-success dark:text-red-500 dark:outline-success;
     @media (hover: hover) {
       &:hover {
-        @apply border-red-900 bg-red-400;
+        @apply dark:border-red-900 dark:bg-red-400;
       }
     }
   }
   &[class*="-warning"] {
-    @apply bg-warning border-warning text-red-500 outline-warning;
+    @apply dark:bg-warning dark:border-warning dark:text-red-500 dark:outline-warning;
     @media (hover: hover) {
       &:hover {
-        @apply border-red-900 bg-red-400;
+        @apply dark:border-red-900 dark:bg-red-400;
       }
     }
   }
   &[class*="-error"] {
-    @apply bg-error border-error text-red-500 outline-error;
+    @apply dark:bg-error dark:border-error dark:text-red-500 dark:outline-error;
     @media (hover: hover) {
       &:hover {
-        @apply border-red-900 bg-red-400;
+        @apply dark:border-red-900 dark:bg-red-400;
       }
     }
   }
@@ -201,14 +201,12 @@
   }
 
   &[class*="-square"] {
+    @apply h-12 w-12 p-0;
     &:where(.btn-xs) {
       @apply h-6 w-6 p-0;
     }
     &:where(.btn-sm) {
       @apply h-8 w-8 p-0;
-    }
-    &:where(.btn-md) {
-      @apply h-12 w-12 p-0;
     }
     &:where(.btn-lg) {
       @apply h-16 w-16 p-0;
