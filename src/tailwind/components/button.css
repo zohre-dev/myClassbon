@@ -19,7 +19,7 @@
     }
   }
   &[class*="-secondary"] {
-    @apply dark:bg-secondry dark:border-secondry dark:text-secondry-content dark:outline-secondry;
+    @apply dark:bg-secondary dark:border-secondary dark:text-secondary-content dark:outline-secondary;
     @media (hover: hover) {
       &:hover {
         @apply dark:border-red-900 dark:bg-red-400;
@@ -114,10 +114,10 @@
     }
 
     &.btn-secondary {
-      @apply dark:text-secondry;
+      @apply dark:text-secondary;
       @media (hover: hover) {
         &:hover {
-          @apply dark:border-red-900 dark:bg-red-500 dark:text-secondry-content;
+          @apply dark:border-red-900 dark:bg-red-500 dark:text-secondary-content;
         }
       }
     }

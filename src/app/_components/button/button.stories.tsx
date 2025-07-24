@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./button";
-import { Exo } from "next/font/google";
 const meta: Meta<typeof Button> = {
   component: Button,
   tags: ["autodocs"],
@@ -50,7 +49,7 @@ export const OutlineColor: Story = {
         Primary
       </Button>
       <Button isOutline variant="secondary">
-        Secondry
+        secondary
       </Button>
       <Button isOutline variant="accent">
         Accent
@@ -237,6 +236,27 @@ export const IconButton: Story = {
           />
         </svg>
       </Button>
+    </>
+  ),
+};
+
+export const ButtonWithLoading: Story = {
+  render: () => (
+    <>
+      <Button variant="neutral" isloading={true} loadingText="Loading"></Button>
+      <Button
+        variant="neutral"
+        isloading={true}
+        loadingType="ring"
+        loadingText="Loading"
+      ></Button>
+      <Button
+        variant="accent"
+        isloading={true}
+        loadingType="ring"
+        loadingText="Loading"
+        isOutline
+      ></Button>
     </>
   ),
 };
