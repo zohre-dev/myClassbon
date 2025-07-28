@@ -33,7 +33,7 @@
   &[class*="-ghost"] {
     @apply dark:text-base;
   }
-  */ &[class*="-primary"] {
+  &[class*="-primary"] {
     @apply dark:text-primary;
   }
   &[class*="-secondary"] {
