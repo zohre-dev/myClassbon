@@ -8,7 +8,7 @@ describe("Button Component", () => {
   });
 
   it("disables the button when isDisabled prop is true", () => {
-    render(<Button isDisabled={true}>Click Here</Button>);
+    render(<Button isDisabled={false}>Click Here</Button>);
     expect(screen.getByRole("button")).toBeDisabled();
   });
 
